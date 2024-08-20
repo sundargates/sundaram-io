@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Sundaram Ananthanarayana
+name: Sundaram Ananthanarayanan
 
 # Username (this should match the folder name)
 authors:
@@ -10,11 +10,11 @@ authors:
 superuser: true
 
 # Role/position
-role: Senior Software Engineer
+role: Staff Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Uber
+- name: Netflix
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
