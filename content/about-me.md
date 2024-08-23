@@ -107,11 +107,9 @@ To sum this up we arrive at the following three guiding principles and one very 
 
 ## Work Experience
 
-### Netflix
+{{< experience netflix Netflix "December 2019 - Present" >}}
 
 **Staff Software Engineer, Data Platform**
-
-_December 2019 - Present_
 
 Broadly, I have been been focusing on making it super easy for engineers at Netflix to publish, transform, and read real-time data. 
 The engines and abstractions I have been involved with is used to power a variety of real-time use-cases at Netflix from powering Netflix's famous recommendations to powering shadow canaries for improving the resilience of services at Netflix. 
@@ -155,11 +153,9 @@ This source mimics the properties of Kafka, providing the same ordering guarante
 This project has been highly successful at Netflix, with hundreds of Flink jobs adopting this solution to backfill their pipelines in the event of an outage. 
 Additionally, I helped open-source the project, and it is now being used by other organizations that utilize both Flink and Apache Iceberg.
 
-### [Uber](https://www.uber.com) {#uber}
+{{< experience uber Uber "June 2016 - December 2019" >}}
 
 **Senior Software Engineer II, Developer Infrastructure**
-
-_June 2016 - December 2019_
 
 #### Submit Queue {#submitqueue}
 
@@ -185,24 +181,20 @@ The implementation of Submit Queue was a tremendous success, reducing the master
 
 You can read more about this system in the [paper][submitqueue-paper] we published at EuroSys '19.
 
-### [Baidu Silicon Valley AI Research Lab](http://research.baidu.com/)
+{{< experience baidu "Baidu Silicon Valley AI Research Lab" "Jan 2016 - June 2016" >}}
 
 **Software Engineer, Speech Inference**
-
-_Jan 2016 - June 2016_
 
 At Baidu, I contributed to the Deep Speech 2 project, which aimed to develop a highly accurate speech recognition system capable of transcribing both English and Mandarin speech using Deep Learning. 
 My primary responsibility was to design and implement the inference APIs and backend infrastructure, enabling developers to seamlessly integrate the speech recognition system into their applications.
 
-### [Twitter](https://x.com/) {#twitter}
+{{< experience twitter "Twitter" "June 2014 - Jan 2016" >}}
 
 **Software Engineer, Growth Infrastructure, Engineering Effectiveness.**
 
-_June 2014 - Jan 2016_
-
-Twitter was my first job after graduating from Stanford, where I initially joined the Growth Infrastructure team. 
-During my time there, I worked on various projects, including the development of a system to store and retrieve users' address book contacts. 
-his system played a crucial role in suggesting people for users to follow on Twitter based on their existing contacts.
+Twitter was my first job after graduating from Stanford. 
+I initially joined the Growth Infrastructure team, where I worked on various projects, including the development of a system to store and retrieve users' address book contacts. 
+This system played a crucial role in suggesting people for users to follow on Twitter based on their existing contacts.
 
 It was incredibly fascinating to see Scala in action at Twitter. 
 I gained significant insights into functional programming and deepened my understanding of concepts such as monoids, monads, and functors.
