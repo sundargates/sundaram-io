@@ -23,9 +23,13 @@ menu:
     * [Flink](#flink)
   * [Uber](#uber)
     * [Submit Queue](#submitqueue)
-* [Publications](#publications)
+  * [Baidu Research Lab](#baidu)
+  * [Twitter](#twitter)
+* [Side Projects](#side-projects)
+  * [BigBeans](#bigbeans)
 * [Education](#education)
   * [Stanford](#stanford)
+* [Publications](#publications)
 * [Talks](#talks)
 <!-- * `TODO: add »testimontials«` -->
 <!-- * [Skills - How / Process](#how--process) -->
@@ -183,17 +187,60 @@ You can read more about this system in the [paper][submitqueue-paper] we publish
 
 ### [Baidu Silicon Valley AI Research Lab](http://research.baidu.com/)
 
+**Software Engineer, Speech Inference**
+
 _Jan 2016 - June 2016_
 
-**Role:** Software Engineer.
+At Baidu, I contributed to the Deep Speech 2 project, which aimed to develop a highly accurate speech recognition system capable of transcribing both English and Mandarin speech using Deep Learning. 
+My primary responsibility was to design and implement the inference APIs and backend infrastructure, enabling developers to seamlessly integrate the speech recognition system into their applications.
 
-### [Twitter](https://x.com/)
+### [Twitter](https://x.com/) {#twitter}
+
+**Software Engineer, Growth Infrastructure, Engineering Effectiveness.**
 
 _June 2014 - Jan 2016_
 
-**Role:** Software Engineer.
+Twitter was my first job after graduating from Stanford, where I initially joined the Growth Infrastructure team. 
+During my time there, I worked on various projects, including the development of a system to store and retrieve users' address book contacts. 
+his system played a crucial role in suggesting people for users to follow on Twitter based on their existing contacts.
 
-**Teams:** Growth Infrastructure, Engineering Effectiveness.
+It was incredibly fascinating to see Scala in action at Twitter. 
+I gained significant insights into functional programming and deepened my understanding of concepts such as monoids, monads, and functors.
+
+---
+
+## Side Projects {#side-projects}
+
+### [BigBeans](https://www.bigbeans.ai) {#bigbeans}
+
+BigBeans is a project I started with a few friends to help engineers and data engineers learn ML by practicing on well-known datasets. 
+We offer a set of curated problems designed to teach ML concepts and their practical applications.
+
+Unlike platforms such as Kaggle, BigBeans emphasizes learning rather than competition. 
+Each problem on BigBeans has a specific threshold of correctness that must be met for the solution to be accepted. 
+These thresholds are tailored to the techniques being taught in each problem.
+
+For example, we feature three versions of the MNIST dataset on BigBeans, each with a different 
+threshold of correctness and a unique technique required to solve it. 
+This approach ensures that users who know a particular technique, such as Support Vector Machines (SVM), 
+can practice problems specifically designed for that technique and receive validation that they are 
+applying it correctly.
+
+---
+
+## Education
+
+### [Stanford University](https://www.stanford.edu/) {#stanford}
+
+_September 2012 - June 2014_
+
+_Master of Science in Electrical Engineering - Distributed Systems_
+
+### [College of Engineering, Guindy](https://ceg.annauniv.edu/)
+
+_Graduated in June 2012_
+
+_Bachelors in Information Technology_
 
 ---
 
@@ -213,21 +260,6 @@ For a complete list of my publications, please refer to my [Google Scholar profi
 
 4. [**Low cost permanent fault detection using ultra-reduced instruction set co-processors**](https://doi.org/10.7873/DATE.2013.196) <br>
    [DATE '13, Grenoble, France](https://www.date-conference.com/)
-
-
-## Education
-
-### [Stanford University](https://www.stanford.edu/) {#stanford}
-
-_September 2012 - June 2014_
-
-_Master of Science in Electrical Engineering - Distributed Systems_
-
-### [College of Engineering, Guindy](https://ceg.annauniv.edu/)
-
-_Graduated in June 2012_
-
-_Bachelors in Information Technology_
 
 ---
 
