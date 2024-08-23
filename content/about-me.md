@@ -35,7 +35,7 @@ menu:
 
 ## Intro
 
-My name is Sundaram Ananthanarayanan, and I am a Staff Software Engineer with a decade of experience at various large tech companies. 
+I am a Staff Software Engineer with a decade of experience at various large tech companies. 
 Over the years, I have honed my software skills and built distributed systems to tackle problems of various scales.
 
 Over time, my focus has shifted from honing technical skills to understanding the following key questions:
