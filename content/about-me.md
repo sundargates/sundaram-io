@@ -22,6 +22,7 @@ menu:
     * [Mantis](#mantis)
     * [Flink](#flink)
   * [Uber](#uber)
+    * [Submit Queue](#submitqueue)
 * [Publications](#publications)
 * [Education](#education)
   * [Stanford](#stanford)
@@ -150,42 +151,41 @@ This source mimics the properties of Kafka, providing the same ordering guarante
 This project has been highly successful at Netflix, with hundreds of Flink jobs adopting this solution to backfill their pipelines in the event of an outage. 
 Additionally, I helped open-source the project, and it is now being used by other organizations that utilize both Flink and Apache Iceberg.
 
-
-<!-- I work with my clients to bring their ideas to market.
-
-Whether you are a small/young start-up or a business unit of a larger already running company we will focus on what your product value proposition is, and how we can test our assumptions about this as early and light-weight as possible.
-
-I have built early prototypes for my client founders to showcase their ideas to possible clients & investors.
-
-For my bigger clients, I supported their existing teams to meet their milestones. In these kinds of scenarios, my focus is on leading by example and thus sharing my experience about how to build scalable software on the web, how to work in a remote set-up, and how to communicate efficiently with the whole team.
-
-Interested? [Let's talk business!](mailto:jan@janraasch.com) -->
-
 ### [Uber](https://www.uber.com) {#uber}
 
 **Senior Software Engineer II, Developer Infrastructure**
 
 _June 2016 - December 2019_
 
-#### Submit Queue
+#### Submit Queue {#submitqueue}
 
-1000s of engineers committing changes concurrently to a repository leads to frequent master breakages. 
-Explored & conceived a new system called SubmitQueue that guarantees an always-green master at scale. 
-At Uber, SubmitQueue handles 1000s of commits/hr submitted by 1000s of engineers every day.
+At Uber, we managed a monorepo that thousands of engineers were committing changes to concurrently. 
+Monorepos offer significant advantages, such as improved code sharing, consistent tooling, and streamlined platform updates. 
+However, a major downside is that the master branch frequently breaks due to the high volume of commits. 
+This was a significant issue at Uber, where the master branch was broken 50% of the time.
+
+To resolve this problem, I led a team to develop a system called Submit Queue. 
+The primary goal of Submit Queue is to ensure that the master branch remains stable. 
+It achieves this by running all necessary checks on changes before merging them into the master branch. 
+The simplest approach would be to queue the changes and run checks sequentially, but this would be inefficient and not scalable.
+
+We identified two critical requirements for the system:
+1. **Scalability**: The system needed to handle thousands of commits per day.
+2. **Low Latency**: Engineers at Uber are highly sensitive to the time it takes for their changes to be merged.
+
+To meet these challenges, we developed two innovative techniques:
+1. **Probabilistic Speculation**: This technique involves speculating on the outcome of checks before they are run, allowing us to perform checks in parallel and reduce overall latency. We utilized machine learning models to predict the outcomes.
+2. **Conflict Analysis**: By analyzing the build graph, we could detect conflicts between changes. This enabled us to run checks for changes affecting independent parts of the system in parallel.
+
+The implementation of Submit Queue was a tremendous success, reducing the master branch breakage rate from 50% to 0%.
+
+You can read more about this system in the [paper][submitqueue-paper] we published at EuroSys '19.
 
 ### [Baidu Silicon Valley AI Research Lab](http://research.baidu.com/)
 
 _Jan 2016 - June 2016_
 
-<!-- _»t for translation. Professional translations into any world language.«_ -->
-
 **Role:** Software Engineer.
-
-<!-- At tolingo I had the opportunity to grow from a Frontend / JavaScript engineer to a full-fledged Full Stack Developer.
-
-We were a small team of 2-3 engineers working on the internal software stack and the customer-facing web-shop.
-
-I worked very closely with our stakeholders to enable the team of sales agents, translation project managers, and translators to deliver high-quality results efficiently through our custom-built software solutions. -->
 
 ### [Twitter](https://x.com/)
 
@@ -195,13 +195,9 @@ _June 2014 - Jan 2016_
 
 **Teams:** Growth Infrastructure, Engineering Effectiveness.
 
-ePages was my first professional engagement in the world of web software. I was eager to get out of the theoretical world of pure mathematics academia and I succeeded in picking up the tools and practices of web development very fast thanks to my strong basis in rational problem-solving.
-
-We moved the existing frontend stack to the leading frontend stack of the time. Also, I was part of a spear-heading team that led the way to an all-new version of the software while implementing agile practices into the work-flow.
-
 ---
 
-## Publications
+## Publications {#submitqueue-paper}
 
 I have been fortunate to publish some of the work I conducted during my time at Stanford and at various companies where I have been employed.
 For a complete list of my publications, please refer to my [Google Scholar profile](https://scholar.google.com/citations?user=R_MUwMwAAAAJ&hl=en).
@@ -248,3 +244,5 @@ _Bachelors in Information Technology_
 
 3. **Keeping Master Green at Scale** <br>
    [EuroSys '19](https://2019.eurosys.org/), [Video](https://vimeo.com/358691692), [Slides](/slides/eurosys19.pdf) 
+
+[submitqueue-paper]: #submitqueue-paper
