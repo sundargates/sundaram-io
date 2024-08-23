@@ -8,12 +8,6 @@ menu:
         weight: 10
 ---
 
-[//]: # (# About Me)
-
-<!-- I'm happy to talk about work engagements for Q4 2024 and beyond!
-
-[Reach out via email](mailto:jan@janraasch.com) 📧 or [book a zoom call](https://calendly.com/jan-raasch/office-hours) ☎️ -->
-
 ## Outline
 
 * [Intro](#intro)
@@ -153,7 +147,7 @@ This source mimics the properties of Kafka, providing the same ordering guarante
 This project has been highly successful at Netflix, with hundreds of Flink jobs adopting this solution to backfill their pipelines in the event of an outage. 
 Additionally, I helped open-source the project, and it is now being used by other organizations that utilize both Flink and Apache Iceberg.
 
-{{< experience uber Uber "June 2016 - December 2019" >}}
+{{< experience uber Uber "May 2016 - December 2019" >}}
 
 **Senior Software Engineer II, Developer Infrastructure**
 
@@ -181,7 +175,7 @@ The implementation of Submit Queue was a tremendous success, reducing the master
 
 You can read more about this system in the [paper][submitqueue-paper] we published at EuroSys '19.
 
-{{< experience baidu "Baidu Silicon Valley AI Research Lab" "Jan 2016 - June 2016" >}}
+{{< experience baidu "Baidu Silicon Valley AI Research Lab" "Jan 2016 - May 2016" >}}
 
 **Software Engineer, Speech Inference**
 
@@ -236,7 +230,7 @@ _Bachelors in Information Technology_
 
 ---
 
-## Publications {#submitqueue-paper}
+## Publications {#publications}
 
 I have been fortunate to publish some of the work I conducted during my time at Stanford and at various companies where I have been employed.
 For a complete list of my publications, please refer to my [Google Scholar profile](https://scholar.google.com/citations?user=R_MUwMwAAAAJ&hl=en).
@@ -269,4 +263,4 @@ For a complete list of my publications, please refer to my [Google Scholar profi
 3. **Keeping Master Green at Scale** <br>
    [EuroSys '19](https://2019.eurosys.org/), [Video](https://vimeo.com/358691692), [Slides](/slides/eurosys19.pdf) 
 
-[submitqueue-paper]: #submitqueue-paper
+[submitqueue-paper]: #publications
