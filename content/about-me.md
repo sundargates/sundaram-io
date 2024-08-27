@@ -101,19 +101,28 @@ To sum this up we arrive at the following three guiding principles and one very 
 
 ## Work Experience
 
-{{< experience netflix Netflix "December 2019 - Present" >}}
-
-**Staff Software Engineer, Data Platform**
+{{< experience netflix Netflix "December 2019 - Present" "Staff Software Engineer, Data Platform" >}}
 
 Broadly, I have been been focusing on making it super easy for engineers at Netflix to publish, transform, and read real-time data. 
 The engines and abstractions I have been involved with is used to power a variety of real-time use-cases at Netflix from powering Netflix's famous recommendations to powering shadow canaries for improving the resilience of services at Netflix. 
 Below are a set of selected projects I have been lucky to be part of at Netflix.
 
-#### Mantis {#mantis}
+#### [Mantis](https://netflix.github.io/mantis/#why-we-built-mantis) {#mantis}
 
-Mantis is a stream processing engine coupled with a data transport, similar to Kafka. 
-It is uniquely positioned to handle operational data by prioritizing latency over consistency, making it ideal for large software companies like Netflix. 
-Originally developed in-house, Mantis is now being used in other companies, including Stripe.
+Mantis is a stream processing engine combined with a data transport system, akin to Kafka and Flink. 
+At its core, Mantis is engineered to handle large volumes of **operational data** with minimal latency. 
+It achieves this by leveraging two essential properties of operational data:
+
+- **Needle in a haystack**: Most operational data is noise (think of all the logs, metrics, and events your service generates), making it unnecessary to publish every bit of it.
+- **Diminishing value over time**: The usefulness of operational data rapidly decreases with time, making real-time processing crucial. For instance, if you need to autoscale a service based on specific metrics, data that is 10 minutes old is practically useless. In other words, the value of the data diminishes quickly over time.
+
+Mantis capitalizes on these properties by providing a transport system that performs:
+
+- **Edge-level filtering and transformations**: Mantis filters out the noise and processes only the valuable data at the edge layer. Data that has subscribers is considered **valuable**.
+- **Send, Don't store**: Mantis avoids storing data, instead sending it directly from the edge to the processing layer in real-time. This approach exploits the diminishing value of operational data, ensuring that only the most recent data is processed.
+
+In my opinion, Mantis is uniquely suited for addressing challenges in the operational domain, making it an excellent fit for large software companies like Netflix. 
+Originally developed in-house, Mantis is now also being utilized by other companies, including Stripe.
 
 **Migrating Mantis to Kubernetes**
 
@@ -147,9 +156,7 @@ This source mimics the properties of Kafka, providing the same ordering guarante
 This project has been highly successful at Netflix, with hundreds of Flink jobs adopting this solution to backfill their pipelines in the event of an outage. 
 Additionally, I helped open-source the project, and it is now being used by other organizations that utilize both Flink and Apache Iceberg.
 
-{{< experience uber Uber "May 2016 - December 2019" >}}
-
-**Senior Software Engineer II, Developer Infrastructure**
+{{< experience uber Uber "May 2016 - December 2019" "Senior Software Engineer II, Developer Infrastructure" >}}
 
 #### Submit Queue {#submitqueue}
 
@@ -175,16 +182,12 @@ The implementation of Submit Queue was a tremendous success, reducing the master
 
 You can read more about this system in the [paper][submitqueue-paper] we published at EuroSys '19.
 
-{{< experience baidu "Baidu Silicon Valley AI Research Lab" "Jan 2016 - May 2016" >}}
-
-**Software Engineer, Speech Inference**
+{{< experience baidu "Baidu Silicon Valley AI Research Lab" "Jan 2016 - May 2016" "Software Engineer, Speech Inference" >}}
 
 At Baidu, I contributed to the Deep Speech 2 project, which aimed to develop a highly accurate speech recognition system capable of transcribing both English and Mandarin speech using Deep Learning. 
 My primary responsibility was to design and implement the inference APIs and backend infrastructure, enabling developers to seamlessly integrate the speech recognition system into their applications.
 
-{{< experience twitter "Twitter" "June 2014 - Jan 2016" >}}
-
-**Software Engineer, Growth Infrastructure, Engineering Effectiveness.**
+{{< experience twitter "Twitter" "June 2014 - Jan 2016" "Software Engineer in Growth Infrastructure & Engineering Effectiveness" >}}
 
 Twitter was my first job after graduating from Stanford. 
 I initially joined the Growth Infrastructure team, where I worked on various projects, including the development of a system to store and retrieve users' address book contacts. 
